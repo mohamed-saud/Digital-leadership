@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  color: #061b2b;
+}
+body {
+  font-family: "Daxw04 wide", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Daxw04 wide !important;
+}
+.contaner {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.mess-container {
+  width: 100%;
+  background-color: #fdce07;
+  padding: 10px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.mess-container a {
+  text-decoration: none;
+}
+.mess-p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #061b2b;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease-in-out;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mess-container a .mess-p:hover {
+  color: #b81f30;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 33px;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 9000;
+}
+.menu-contaner {
+  width: 95%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.logo a img {
+  width: 150px;
+  height: 100px;
+  fill: white;
+}
+
+.links {
+  display: flex;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+
+  transition: ease-in-out 0.5s;
+  top: 0px;
+  right: -900px;
+  z-index: 999;
+  background-color: #061b2b;
+  background-image: url("./img/section2-bg.png");
+  background-position: center;
+  background-size: inherit;
+  background-repeat: no-repeat;
+  /* display: none; */
+}
+.links ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  width: 100%;
+}
+.links ul li {
+  list-style: none;
+  width: 100%;
+  transition: ease-in-out 0.3s;
+  padding: 5px 50px;
+}
+.links ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  transition: ease-in-out 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.links ul li a:hover {
+  color: #fdce07;
+  margin-left: 20px;
+}
+.links ul .line {
+  background-color: white;
+  width: 80%;
+  height: 2px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.links ul .more-detal {
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 10px;
+  color: white;
+  opacity: 0.5;
+}
+
+#burger-container {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  z-index: 333;
+}
+#burger {
+  width: 50px;
+  height: 50px;
+}
+#burger i {
+  font-size: 35px;
+  color: white;
+}
+.closse {
+  margin: 10px auto;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 10px;
+  top: 1px;
+  /* background: crimson; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  /* padding: 8px; */
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+.closse i {
+  font-size: 35px;
+  color: white;
+}
+
+.closse-side {
+  right: -1500px;
+}
+.open-side {
+  right: 0px;
+}
+
+.banur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+  background-image: url("./img/5d429d97a839ea6e7a9af279_Digital-Leadership_Img_HOME_01.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.banur h3 {
+  color: #fff;
+  font-family: volkhov, Sans-serif;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+.obturateur {
+  fill: none;
+  stroke: currentColor;
+  position: static;
+}
+.bloc-demo {
+  color: #fff;
+}
+.bloc-head {
+  display: none;
+}
+.digital-sec {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.left-colo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 200px auto;
+}
+.elementor-widget-container h1 {
+  color: #061b2b;
+  height: 30px;
+  font-size: 35px;
+}
+.elementor-widget-container h2 {
+  font-size: 20px;
+  color: #061b2b;
+
+  height: 40px;
+}
+.elementor-widget-container p {
+  font-size: 17px;
+  height: 40px;
+  font-weight: 600;
+  color: #061b2b62;
+}
+.right-colo {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #061b2b;
+  position: relative;
+}
+.elment-colo {
+  margin-top: 95px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.elementor-widget-container h3 {
+  font-size: 33px;
+  line-height: 43px;
+  height: 90px;
+}
+.img-holder {
+  width: 100%;
+  height: 100%;
+}
+.obturateur {
+  color: white;
+}
+@keyframes wheel {
+  from {
+    stroke-dashoffset: 1123;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.img-holder {
+  background-image: url("./img/5d429dc4a839ea2bd29af757_Digital-Leadership_Img_HOME_02.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.logo-svg2 {
+  display: none;
+}
+
+.nothinking {
+  width: 100%;
+  height: 100vh;
+  background-color: #061b2b;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.content-last {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 120px;
+}
+.left-thinking {
+  width: 50%;
+  height: 100%;
+  background-image: url("/img/5d429de0c0e46e689d241164_Digital-Leadership_Img_HOME_03.jpg");
+  background-position: initial;
+  background-size: cover;
+}
+.right-thinking {
+  width: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.text-content {
+  margin-top: 30px;
+  width: 70%;
+  padding: 10px;
+}
+.text-content h1 {
+  font-size: 35px;
+  margin: 0;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  font-family: Volkhov;
+  margin-bottom: 20px;
+}
+.text-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff79;
+}
+footer {
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+.footer-content {
+  background-color: #fdce07;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-foter {
+  width: 60%;
+  text-align: center;
+}
+.text-foter h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: Volkhov, sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.13px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+.text-foter p {
+  margin-bottom: 0;
+  color: white;
+  letter-spacing: 0.11px;
+  font-size: 16px;
+  text-align: center;
+}
+.btn-s {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.btn-modil {
+  font-size: 16px;
+  font-weight: 400;
+  background: #061b2b;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-modil::before {
+  content: "";
+  position: absolute;
+  background: #b81f30;
+  left: -10px;
+  height: 500%;
+  width: 0%;
+  z-index: -1;
+  transition: 1s ease-in-out;
+  transform: rotate(-20deg);
+}
+.btn-modil:hover::before {
+  width: 150%;
+}
+
+.btn-modil a {
+  text-decoration: none;
+  color: white;
+}
+.revew {
+  width: 100%;
+  height: 60px;
+  margin-top: 1px;
+  background-color: #fdce07;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+.revew:hover {
+  background-color: white;
+  color: #fdce07;
+}
+.contact {
+  width: 90%;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-contact {
+  display: flex;
+}
+.list-contact li {
+  margin-left: 30px;
+  opacity: 0.7;
+  list-style: none;
+}
+.contact span {
+  opacity: 0.5;
+}
+
+.list-contact li a {
+  text-decoration: none;
+  color: #061b2b;
+  font-size: 15px;
+}
+.list-contact li a:hover {
+  color: #b81f30;
+  opacity: 1;
+}
+/* all anmatons*/
+
+.active .digital-sec .right-colo .elment-colo .svg-holder #obturateur1 {
+  animation: drow 2s forwards;
+}
+@keyframes drow {
+  from {
+    stroke-dashoffset: 1123;
+  }
+  tp {
+    stroke-dashoffset: 0;
+  }
+}
+
+.active .digital-sec .left-colo .elment-colo .elementor-widget-container {
+  animation: movefromLeft 1.5s ease-in-out;
+}
+.active .digital-sec .left-colo .elment-colo .elementor-widget-container p {
+  animation: movefromLeft 2s ease-in-out;
+}
+.active .fp-tableCell .nothinking .content-last .right-thinking .text-content {
+  animation: movefromLeft 3s ease-in-out;
+}
+@keyframes movefromLeft {
+  from {
+    opacity: 0;
+  }
+  tp {
+    opacity: 1;
+  }
+}
