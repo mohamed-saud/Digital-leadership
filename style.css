@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Daxw04 wide";
+  src: url("./fonts/DaxWideMedium.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,7 @@ html {
   color: #061b2b;
 }
 body {
-  font-family: "Daxw04 wide", sans-serif;
+  font-family: Daxw04 wide, sans-serif;
   font-size: 16px;
   line-height: 24px;
   transition: all 0.3;
@@ -21,8 +25,17 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: Daxw04 wide !important;
+  font-family: Daxw04 wide;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Volkhov;
+}
+
 .contaner {
   width: 80%;
   margin: 10px auto;
@@ -43,15 +56,13 @@ p {
 }
 .mess-p {
   width: 80%;
-  margin: 0 auto;
+  margin: 4px auto;
   text-align: center;
   color: #061b2b;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0.5px;
   transition: all 0.4s ease-in-out;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mess-container a .mess-p:hover {
@@ -62,7 +73,7 @@ p {
   width: 100%;
   display: flex;
   position: fixed;
-  top: 33px;
+  top: 40px;
   justify-content: center;
   background-color: transparent;
   z-index: 9000;
@@ -84,11 +95,10 @@ p {
   position: fixed;
   width: 50%;
   height: 100%;
-
   transition: ease-in-out 0.5s;
   top: 0px;
   right: -900px;
-  z-index: 999;
+  z-index: 2;
   background-color: #061b2b;
   background-image: url("./img/section2-bg.png");
   background-position: center;
@@ -144,17 +154,27 @@ p {
 #burger-container {
   cursor: pointer;
   position: absolute;
-  right: 0px;
-  z-index: 333;
+  position: fixed;
+  right: 20px;
+  z-index: 33333;
 }
 #burger {
-  width: 50px;
+  width: 38px;
   height: 50px;
+
+  /* background-color: black; */
 }
-#burger i {
-  font-size: 35px;
-  color: white;
+#burger span {
+  display: block;
+  height: 3px;
+  width: 38px;
+  background-color: white;
+  margin-bottom: 7px;
+  position: relative;
+  top: 0;
+  transition: all ease-in-out 0.5s;
 }
+
 .closse {
   margin: 10px auto;
   width: 70px;
@@ -162,17 +182,19 @@ p {
   position: absolute;
   right: 10px;
   top: 1px;
+  font-family: sans-serif;
   /* background: crimson; */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   /* padding: 8px; */
   border-radius: 50%;
+  background-color: black;
   transition: 0.5s ease-in-out;
 }
 .closse i {
-  font-size: 35px;
+  font-size: 26px;
   color: white;
 }
 
@@ -181,8 +203,20 @@ p {
 }
 .open-side {
   right: 0px;
+  z-index: -1;
 }
-
+#burger.anmat-burger span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+#burger.anmat-burger span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+#burger.anmat-burger span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: -10px;
+}
 .banur {
   display: flex;
   align-items: center;
@@ -196,7 +230,7 @@ p {
 }
 .banur h3 {
   color: #fff;
-  font-family: volkhov, Sans-serif;
+  font-family: volkhov;
   font-size: 60px;
   line-height: 68px;
   letter-spacing: 0.2px;
@@ -222,24 +256,29 @@ p {
   width: 50%;
   display: flex;
   justify-content: center;
-  margin: 200px auto;
+  align-items: center;
 }
 .elementor-widget-container h1 {
   color: #061b2b;
-  height: 30px;
-  font-size: 35px;
+  font-size: 30px;
+  margin: 0;
+  line-height: 36px;
+  max-width: 456px !important;
+  word-wrap: break-word;
+  letter-spacing: 0.1px;
 }
 .elementor-widget-container h2 {
-  font-size: 20px;
   color: #061b2b;
-
-  height: 40px;
+  font-size: 25px;
+  margin-top: 5px;
 }
 .elementor-widget-container p {
-  font-size: 17px;
+  font-size: 16px;
   height: 40px;
   font-weight: 600;
-  color: #061b2b62;
+  color: #061b2bc0;
+  line-height: 22px;
+  margin-top: 20px;
 }
 .right-colo {
   width: 50%;
@@ -249,11 +288,8 @@ p {
   background-color: #061b2b;
   position: relative;
 }
-.elment-colo {
-  margin-top: 95px;
-  overflow: hidden;
-  position: absolute;
-}
+/* .elment-colo {
+} */
 
 .elementor-widget-container h3 {
   font-size: 33px;
@@ -327,7 +363,8 @@ p {
   margin-bottom: 20px;
 }
 .text-content p {
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 0.11px;
   margin-bottom: 20px;
   color: #ffffff79;
 }
@@ -469,13 +506,263 @@ footer {
   animation: movefromLeft 2s ease-in-out;
 }
 .active .fp-tableCell .nothinking .content-last .right-thinking .text-content {
-  animation: movefromLeft 3s ease-in-out;
+  animation: movefromLeft 1s ease-in-out;
 }
 @keyframes movefromLeft {
   from {
     opacity: 0;
+    margin-top: 50px;
   }
   tp {
     opacity: 1;
+    transform: translate(0, 0);
+    margin-top: 0px;
   }
+}
+/* start acting section*/
+.acting {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.left-acting {
+  width: 50%;
+  height: 100%;
+  background-color: #061b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-acting div {
+  align-items: center;
+  justify-items: center;
+  margin-top: 20px;
+  width: 70%;
+  height: 50%;
+}
+.left-acting div h2 {
+  max-width: 456px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: Volkhov;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #fff;
+}
+.left-acting div p {
+  max-width: 407px;
+  margin-bottom: 20;
+  color: #697a8a;
+  letter-spacing: 0.11px;
+}
+.right-acting {
+  width: 50%;
+  height: 100vh;
+  background: #061b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sliderr {
+  width: 80%;
+  height: 80%;
+  margin-top: 80px;
+  /* overflow: hidden; */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  display: block;
+}
+.sliderss {
+  /* width: 600px;
+  height: 550px; */
+  width: 90%;
+  height: 90%;
+  /* display: flex; */
+  background-color: #061b2b;
+}
+.navigation-auto {
+  display: flex;
+  position: absolute;
+  left: 53%;
+
+  bottom: 10%;
+}
+
+.slidee {
+  transition: 2s opacity;
+  position: absolute;
+  opacity: 0;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.item {
+  background-color: #061b2b;
+  display: grid;
+  height: 100%;
+  /* margin: 20px; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(140px, auto);
+  grid-gap: 20px;
+}
+.item img {
+  width: 160px;
+}
+
+/*__________*/
+.navigation-auto div {
+  border: 0.5px solid #fff;
+  padding: 3px;
+  margin-left: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* start big slider section*/
+.big-slide {
+  background-color: #061b2b;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-contaner {
+  background-color: #061b2b;
+  width: 60%;
+  height: 50%;
+  /* padding: 60px 0px 0px 0px; */
+  position: relative;
+}
+.slider-contaner input {
+  display: none;
+}
+.slid-item {
+  width: 100%;
+  height: 100%;
+  background-color: #061b2b;
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+.slid-item h2 {
+  color: #fff;
+  max-width: 100%;
+  margin-bottom: 48px;
+  line-height: 42px;
+  letter-spacing: 0.16px;
+  font-size: 30px;
+}
+.slid-item div {
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Daxw04, sans-serif;
+  color: #00aeef;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.slected {
+  opacity: 1;
+}
+.active {
+  background-color: #fff;
+}
+
+/* ---------------start section funder */
+.funder-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.funder-content-left {
+  width: 50%;
+  height: 90vh;
+}
+.funderi-mg {
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/5d429e0fa839eae53a9af8c4_Digital-Leadership_Img_HOME_04.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.funder-content-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.funder-text {
+  width: 70%;
+  height: 50%;
+}
+.funder-text h1 {
+  color: #061b2b;
+  font-size: 30px;
+  margin: 0;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  margin-bottom: 10px;
+}
+.funder-text p {
+  color: #697a8a;
+  letter-spacing: 0.11px;
+  font-size: 16px;
+  max-width: 395px;
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+/* ---------------end section funder */
+
+/* ---------------start section people */
+.best-people {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.best-people-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.best-people-text {
+  width: 404px;
+  max-width: 404px;
+}
+.best-people-text h1 {
+  color: #061b2b;
+  font-size: 30px;
+  margin: 0;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  margin-bottom: 10px;
+}
+.best-people-text p {
+  margin-bottom: 0;
+  color: #697a8a;
+  letter-spacing: 0.11px;
+  font-size: 16px;
+  max-width: 404px;
+  margin-left: 0;
+}
+.best-people-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+}
+.best-people-img {
+  width: 80%;
+  height: 80vh;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url("./img/5d429e2a41794c46aa5062df_Digital-Leadership_Img_HOME_05.jpg");
 }
